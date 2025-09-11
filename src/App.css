@@ -55,6 +55,34 @@ button{
   background: #000;
   color: white;
   box-shadow: 0 0 0.5em #00000044;
-  cursor: alias;
   transition: box-shadow 300ms, transform 300ms;
+}
+input[type="text"], input[type="password"] {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  border-radius: 18px;
+  border: none;
+  padding: 0.6em 1.2em;
+  margin: 0.5em;
+  background: #00000022;
+  color: white;
+  box-shadow: 0 0 0.5em #00000044;
+  transition: box-shadow 300ms, transform 300ms;
+}
+input[type="text"]:focus, input[type="password"]:focus {
+  border: none;
+  outline: none;
+  transform: scale(1.1);
+  transition: ease-in-out 0.35s;
+  box-shadow: 0 0 1em #00000088;
+}
+input[type="text"]:hover, input[type="password"]:hover {
+  box-shadow: 0 0 1em #00000088;
+  transform: scale(1.05);
+  transition: ease-in-out 0.35s;
+}
+button:hover {
+  box-shadow: 0 0 1em #00000088;
+  transform: scale(1.15);
+  transition: ease-in-out 0.35s;
 }

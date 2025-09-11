@@ -22,9 +22,9 @@ const Login: React.FC = () => {
 
   return (
     <>
-      <div style={{ display: "flex", backgroundColor: "#847996", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh" , width: "100vw", top:0, left:0, position: "fixed", overflow: "hidden"}}>
-        <h2 className="t-bold">Welcome</h2>
-        <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem", width: "300px", background: "#transparent", padding: "2rem", borderRadius: "8px", zIndex: 1  }}>
+      <div style={{ display: "flex", backgroundColor: "#260B3C", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh" , width: "100vw", top:0, left:0, position: "fixed", overflow: "hidden"}}>
+        <h2 className="text-bold, text-white">Welcome</h2>
+        <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem", width: "300px", background: "transparent", padding: "2rem", borderRadius: "8px", zIndex: 1  }}>
         <input
           type="text"
           placeholder="Username"
