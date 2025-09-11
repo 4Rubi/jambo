@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Particles from "./ui/Particles";
-import { Button } from "./ui/button";
+import { Button } from "./ui/magicui/button";
 import { InteractiveHoverButton } from "./ui/magicui/interactive-hover-button";
+import { SmoothCursor } from "./ui/magicui/smooth-cursor";
 
 
 const Login: React.FC = () => {
@@ -22,6 +23,7 @@ const Login: React.FC = () => {
 
   return (
     <>
+    <SmoothCursor />
       <div style={{ display: "flex", backgroundColor: "#260B3C", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh" , width: "100vw", top:0, left:0, position: "fixed", overflow: "hidden"}}>
         <h2 className="text-bold, text-white">Welcome</h2>
         <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem", width: "300px", background: "transparent", padding: "2rem", borderRadius: "8px", zIndex: 1  }}>
