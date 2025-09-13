@@ -16,22 +16,23 @@ const navItems = [
 const Landing: React.FC = () => {
   return (
     <>
-      
+      <div className="container">
       <SmoothCursor />
-      <div className="container" style={{ position: "relative", width: "100vw", height: "100dvh", backgroundColor: "#260B3C" ,overflow: "hidden"}}>  
+      <div style={{ position: "fixed", width: "100vw", height: "100vh", top: 0, left:0, backgroundColor: "#260B3C" ,overflow: "hidden"}}>  
         <div style={{ position: "absolute", touchAction: "none", top: 0, left: 0, width: "100%", height: "100%"}}>
           <LiquidEther />
         </div>
         <div>
           <PillNav logo={logo} items={navItems} />
         </div>
-        <div style={{ position: "absolute", top: "1em", left: "1.3em", color: "#ffffff", zIndex: 1 , display: "flex", justifyContent: "center", height: "10%", width: "10%", fontSize: "2rem" }}>
-          <h1 className="text-bold, text-white, font- medium, bg-center text-5xl, object-top-left, ml-1.5.5 p-1.5">.rubi</h1>       
+        <div style={{ position: "fixed", color: "#ffffff", zIndex: 1 , display: "flex", justifyContent: "center", height: "10%", width: "10%", fontSize: "2rem" }}>
+          <h1 className="text-bold, text-white, font- medium, bg-center text-5xl, object-top-left ml-1.5.5 p-1.5">.rubi</h1>       
         </div>
-        <section style={{ position: "absolute", color: "white", backgroundColor: "#ffffff", filter: "blur(4px)", height: "35%", width: "35%", pointerEvents: "none",  opacity: 0.1, zIndex: 1 }} className="touchaction -none, size-16">
+        <div className="flex items-center justify-center h-screen text-white z-10 relative pointer-events-none">
           <p>Welcome to the landing page!</p>
-        </section>
+        </div>
       </div>
+    </div>
     </>
   );
 };
