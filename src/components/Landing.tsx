@@ -1,6 +1,4 @@
 import React from "react";
-import PillNav from "./ui/PillNav";
-import logo from "../assets/react.svg";
 import LiquidEther from "./ui/LiquidEther";
 import { InteractiveHoverButton } from "./ui/magicui/interactive-hover-button";
 import { SmoothCursor } from "./ui/magicui/smooth-cursor";

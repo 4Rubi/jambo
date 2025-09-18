@@ -2,7 +2,7 @@
 
 import { motion, useSpring } from "framer-motion";
 import type { FC } from "react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import type { JSX } from "react";
 interface Position {
   x: number;
@@ -90,7 +90,7 @@ export function SmoothCursor({
     restDelta: 0.001,
   },
 }: SmoothCursorProps) {
-  const [isMoving, setIsMoving] = useState(false);
+  // Removed unused isMoving state
   const lastMousePos = useRef<Position>({ x: 0, y: 0 });
   const velocity = useRef<Position>({ x: 0, y: 0 });
   const lastUpdateTime = useRef(Date.now());
@@ -150,11 +150,9 @@ export function SmoothCursor({
         previousAngle.current = currentAngle;
 
         scale.set(0.95);
-        setIsMoving(true);
 
         const timeout = setTimeout(() => {
           scale.set(1);
-          setIsMoving(false);
         }, 150);
 
         return () => clearTimeout(timeout);
