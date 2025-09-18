@@ -3,11 +3,14 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Login from "./components/Login";
 import Landing from "./components/Landing";
 import './App.css';
+import { Analytics } from "@vercel/analytics/next"
 
 const App: React.FC = () => {
   const [guestUsername, setGuestUsername] = useState("");
 
   return (
+    <>
+      <Analytics />
     <Router>
       <Routes>
         <Route path="/" element={<Navigate to="/login" />} />
@@ -15,6 +18,7 @@ const App: React.FC = () => {
         <Route path="/landing" element={<Landing username={guestUsername} />} />
       </Routes>
     </Router>
+    </>
   );
 };
 
