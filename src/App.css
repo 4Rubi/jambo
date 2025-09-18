@@ -84,3 +84,58 @@ button:hover {
   transform: scale(1.15);
   transition: ease-in-out 0.35s;
 }
+.bio-hero {
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+  
+  background: linear-gradient(135deg, #b163fa, #050708);
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  padding: 2rem;
+}
+
+.bio-content {
+  max-width: 600px;
+  animation: fadeInUp 1s ease;
+}
+
+.bio-content h1 {
+  font-size: 4.5rem;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.bio-content p {
+  font-size: 2.5rem;
+  color: #630d6b;
+  line-height: 1.6;
+}
+
+.tagline {
+  display: block;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  color: #2563eb;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  bottom: 2em;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.floatingcards {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  animation: fadeInUp 1s ease;
+}
