@@ -4,6 +4,7 @@ import logo from "../assets/react.svg";
 import LiquidEther from "./ui/LiquidEther";
 import { InteractiveHoverButton } from "./ui/magicui/interactive-hover-button";
 import { SmoothCursor } from "./ui/magicui/smooth-cursor";
+import TextType  from "./ui/TextType";
 import afroBitImage from "../components/images/afro-bit-purple.jpeg";
 import mailOpenIcon from "../components/images/purpleeye.jpeg";
 import instagramblackIcon from "../components/images/purpledp.jpeg";
@@ -77,11 +78,13 @@ const Landing: React.FC<LandingProps> = ({ username }) => {
 
           {/* Card 2: Text */}
           <div className="bio-hero col-span-4 md:row-start-1 md:col-span-3 md:row-span-1 rounded-md flex items-center justify-center bg-white/10 min-h-[100px]">
-            <h1 className="bio-content">Hi, I'm Rubi 👋</h1>
-              <p className="bio-content">
+            <h1 className="bio-content text-3xl p-3">Hi, I'm Rubi 👋</h1>
+              <p className="bio-content text-2xl">
+                
                   A curious frontend developer exploring the world of HTML, CSS, JS & React.
                   I’m fascinated by UI/UX design and love building interfaces that feel smooth,
                   intuitive, and just a little bit magical ✨.
+              
               </p>
           <span className="tagline">Always building. Always learning.</span>
             </div>
@@ -100,7 +103,7 @@ const Landing: React.FC<LandingProps> = ({ username }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     >
-                    <InteractiveHoverButton className=" absolute inset-0 opacity-0  hover:opacity-100 scale-100 zindex-33">
+                    <InteractiveHoverButton className=" absolute inset-0 opacity-0  hover:opacity-100 scale-100 ">
                       .email
                     </InteractiveHoverButton>
                   </a>
@@ -145,8 +148,17 @@ const Landing: React.FC<LandingProps> = ({ username }) => {
           </div>
 
           {/* Card 7: Full width */}
-          <div className="col-span-4 rounded-md flex items-center justify-center bg-white/10 min-h-[12rem]">
-            Card 7 (Full Width)
+          <div className="tools col-span-4 rounded-md flex items-center justify-center bg-white/10 min-h-[12rem]">
+            <TextType
+              text={["Languages: HTML, CSS, JavaScript, TypeScript.", "Frameworks: React with TSX, Tailwind CSS.", "Libraries: GSAP and React Router.", "Build tools: Vite.", "Version Control: Git & GitHub.", "Other tools: VS Code, npm, Prettier."]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={true}
+              deletingSpeed={30}
+              cursorCharacter="|"
+              className="text-3xl text-center px-4 font-bold"
+              />
+              
           </div>
         </div>
       </main>
